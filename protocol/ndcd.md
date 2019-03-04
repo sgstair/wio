@@ -37,4 +37,4 @@ delay period.
 * Opless channels tend to remain permanently opless.
 
 # Related Extensions
-* [Split Mode](/protocol/splitmode.html) - a feature where channels can't be created (or in some cases joined at all) during a split.
+* [Split Mode](/irchelp/protocol/splitmode.html) - a feature where channels can't be created (or in some cases joined at all) during a split.
