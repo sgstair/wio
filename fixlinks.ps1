@@ -9,6 +9,13 @@ foreach($file in $mdfiles)
     # The files on the server are .html rather than .md
     $relpath = $relpath -replace "\.md$",".html";
     $filemap[$relpath] = $true;  
+    
+    if($relpath -like "*/index.html")
+    {
+        # Also track/fix links to directories that omit the index.html
+        $relpath = $relpath.replace("/index.html","");
+        $filemap[$relpath] = $true;  
+    }
 }
 
 $regex = new-object Text.RegularExpressions.Regex "(\[[^\]]+\]\([^\)]+\))"
